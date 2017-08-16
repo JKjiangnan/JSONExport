@@ -18,7 +18,7 @@ class LangModel{
     var constructors : [Constructor]!
 	var dataTypes : DataType!
 	var displayLangName : String!
-	var fileExtension : String!
+	var fileExtension : String = ""
 	var genericType : String!
 	var getter : String!
 	var importForEachCustomType : String!
@@ -26,13 +26,13 @@ class LangModel{
 	var instanceVarDefinition : String!
     var instanceVarWithSpeicalDefinition : String!
     var typesNeedSpecialDefinition : [String]!
-	var langName : String!
+	var langName : String = ""
     var constVarDefinition : String!
 	var modelDefinition : String!
     var modelDefinitionWithParent : String!
     var defaultParentWithUtilityMethods : String!
 	var modelEnd : String!
-	var modelStart : String!
+	var modelStart : String = ""
 	var setter : String!
 	var staticImports : String!
 	var supportsFirstLineStatement : Bool!
@@ -66,7 +66,7 @@ class LangModel{
 			}
         importHeaderFile = dictionary["importHeaderFile"] as? String
 		displayLangName = dictionary["displayLangName"] as? String
-		fileExtension = dictionary["fileExtension"] as? String
+		fileExtension = dictionary["fileExtension"] as! String
 		genericType = dictionary["genericType"] as? String
 		getter = dictionary["getter"] as? String
 		importForEachCustomType = dictionary["importForEachCustomType"] as? String
@@ -74,13 +74,16 @@ class LangModel{
         instanceVarWithSpeicalDefinition = dictionary["instanceVarWithSpeicalDefinition"] as? String
         typesNeedSpecialDefinition = dictionary["typesNeedSpecialDefinition"] as? [String]
         
-		langName = dictionary["langName"] as? String
+		langName = dictionary["langName"] as! String
         constVarDefinition = dictionary["constVarDefinition"] as? String
 		modelDefinition = dictionary["modelDefinition"] as? String
         modelDefinitionWithParent = dictionary["modelDefinitionWithParent"] as? String
         defaultParentWithUtilityMethods = dictionary["defaultParentWithUtilityMethods"] as? String
 		modelEnd = dictionary["modelEnd"] as? String
-		modelStart = dictionary["modelStart"] as? String
+        if let mStart = dictionary["modelStart"] as? String{
+            modelStart = mStart
+        }
+
 		setter = dictionary["setter"] as? String
 		staticImports = dictionary["staticImports"] as? String
 		supportsFirstLineStatement = (dictionary["supportsFirstLineStatement"] as? NSString)?.boolValue

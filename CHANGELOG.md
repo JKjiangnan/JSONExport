@@ -1,3 +1,26 @@
+* Version 1.0.8
+- Merged PR #72 App now remembers what language user selected last time. Thanks to @TParizek
+- Merged PR #75 Fix Error for Swift in Xcode 8.2.1 and replace NSDictionary. Thanks to @dimohamdy
+- Merged PR #76 NSCoding protocol - swift 3 compatible. Thanks to @gajjartejas
+
+* Version 1.0.7
+	- Merged PR #70 to update unbox JSON file for Swift 3
+	- Fixed issue #71 by disabiliing the handling of smart quotes and also fixing the source of this issue in the JSON inpute text view.
+	- Removed SBJson dependency.
+
+
+* Version 1.0.6
+	- Merged PR #69 to fix some issues with SwiftyJSON generated files
+	- Merged PR #59 to auto fill the root class name from the imported JSON file.	
+* Version 1.0.5
+	- Merged pull request #58 to update ObjectMapper generated files to for Swift 3	
+* Version 1.0.4
+	- Merged pull request #47 to add support to open .json file from the app (thanks to RobinChao)
+	- Merged pull request #50 (thanks king129)
+	- Merged pull request #54 to complete the Swift 3 and Xcode 8 support
+	- Fixed issue #48 that causes the app to produce empty files
+	- Fixed issue #53 to call copy instead of copyWithZone method for the NSCopying implementation
+	
 * Version 1.0.3
 	- Merged pull request #45 to add support Android GSON (Thanks to forestsoftjpdev)
 
